@@ -103,6 +103,6 @@ video {
 }
 
 /* Targetting img tag inside button tag inside sound-select div */
-.sound-select button img{
-    height: 100%;
+.image{
+    height: 4.5em;
   }
