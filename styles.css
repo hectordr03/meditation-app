@@ -38,7 +38,7 @@
   transform: translate(-50%, -50%);
 }
 
-.time-select {
+/* .time-select {
   background-color: darkgreen;
 }
 
@@ -48,7 +48,7 @@
 
 .player-container {
   background-color: aqua;
-}
+} */
 
 .time-display {
   position: absolute;
@@ -65,4 +65,38 @@ video {
 
   /* z-index refers to the layer order of elements. higher numbers are stacked above other elements on page (think photoshop) */
   z-index: -10;
+}
+
+.time-select button,
+.sound-select button{
+color: white;
+width: 30%;
+height: 10%;
+background: none;
+border: 2px solid white;
+cursor: pointer;
+border-radius: 5px;
+font-size: 20px;
+transition: all 0.5s ease;
+}
+
+.time-select button:hover{
+    color: black;
+    background: white;
+}
+
+.sound-select button{
+    border: none;
+    height: 120px;
+    width: 120px;
+}
+
+/* The "nth-child(1)" specifies which element you want to modify. */
+/* This block styles the first button (specified by "button:nth-child(1)") inside the sound-select div. */
+.sound-select button:nth-child(1){
+
+}
+/* This block styles the second button (specified by "button:nth-child(2)") inside the sound-select div. */
+.sound-select button:nth-child(2){
+
 }
