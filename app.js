@@ -18,6 +18,15 @@ const app = () => {
     outline.style.strokeDasharray = outlineLength;
     outline.style.strokeDashoffset = outlineLength;
 
+    // Select different sounds
+    sounds.forEach(sound => {
+        sound.addEventListener('click', function () {
+            song.src = this.getAttribute('data-sound');
+            video.src = this.getAttribute('data-video');
+            checkPlay(song);
+        })
+    })
+
     // Play sound
     play.addEventListener('click', () => {
         checkPlay(song);
@@ -27,8 +36,10 @@ const app = () => {
     timeSelect.forEach(option => {
         // We use an ES5 function to make use of the "this" keyword
         option.addEventListener('click', function () {
+            let seconds = Math.floor(fakeDuration % 60);
+            let minutes = Math.floor(fakeDuration / 60);
             fakeDuration = this.getAttribute('data-time');
-            timeDisplay.textContent = `${Math.floor(fakeDuration / 60)}:${Math.floor(fakeDuration % 60)}`; 
+            timeDisplay.textContent = `${minutes}:${seconds}`;
         })
     })
 
@@ -59,6 +70,14 @@ const app = () => {
 
         // Animate text
         timeDisplay.textContent = `${minutes}:${seconds}`;
+
+        // Stop timer and video once timer hits 0
+        if (currentTime >= fakeDuration) {
+            song.pause();
+            song.currentTime = 0;
+            play.src = './assets/DevEd-assets/svg/play.svg';
+            video.pause();
+        }
     }
 };
 
