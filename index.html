@@ -8,6 +8,15 @@
   </head>
   <body>
     <div class="app">
+      <div class="vid-container">
+        <video loop>
+          <source
+            src="./assets/DevEd-assets/video/beach.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+
       <div class="time-select">
         <button data-time="300">5 mins</button>
         <button data-time="600">10 mins</button>
@@ -21,6 +30,7 @@
 
         <!-- svg tag is used so we can animate it later -->
         <svg
+          class="track-outline"
           width="453"
           height="453"
           viewBox="0 0 453 453"
@@ -38,6 +48,7 @@
 
         <!-- NOTE: This is the svg for the animated moving portion of the progress bar -->
         <svg
+          class="moving-outline"
           width="453"
           height="453"
           viewBox="0 0 453 453"
@@ -52,12 +63,22 @@
             stroke-width="20"
           />
         </svg>
+        <h3 class="time-display">0:00</h3>
       </div>
       <div class="sound-select">
         <button
-          data-sound="./assets/music/X. La Cathedrale engloutie.mp3"
-        ></button>
-        <button></button>
+          data-sound="./assets/DevEd-assets/sounds/beach.mp3"
+          data-video="./assets/DevEd-assets/video/beach.mp4"
+        >
+          <img src="./assets/DevEd-assets/svg/beach.svg" alt="beach" />
+        </button>
+
+        <button
+          data-sound="./assets/DevEd-assets/sounds/rain.mp3"
+          data-video="./assets/DevEd-assets/video/rain.mp4"
+        >
+          <img src="./assets/DevEd-assets/svg/rain.svg" alt="rain" />
+        </button>
       </div>
     </div>
 
