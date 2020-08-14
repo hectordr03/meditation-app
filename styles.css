@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.time-select,
+.sound-select,
+.player-container {
+    height: 80%;
+    flex: 1;
+}
+
+.time-select {
+    /* background-color: darkgreen; */
+}
+
+.sound-select {
+    /* background-color: darkred; */
+}
+
+.player-container {
+    /* background-color: aqua; */
+}
+
+.background{
+    display: ;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    z-index: -10;
+}
